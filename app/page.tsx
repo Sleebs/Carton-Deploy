@@ -6,7 +6,6 @@ import Hero from "./home/Hero";
 import Marquee from "./home/Marquee";
 import PersonalShopper from "./home/PersonalShopper";
 import Cursor from "@/components/stickyCursor/stickyCursor";
-import BurgerMenu from "@/components/burgerMenu/BurgerMenu";
 import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
