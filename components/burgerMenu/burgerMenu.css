@@ -1,0 +1,38 @@
+.burger-container {
+  scale: 1;
+}
+.bounds {
+  /* border: 1px solid cadetblue; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: all;
+}
+.bounds:hover {
+  transform: scale(4);
+}
+
+.burger-menu::before {
+  display: inline-block;
+  content: "";
+  height: 2px;
+  width: 44px;
+  mix-blend-mode: difference;
+  background-color: white;
+  pointer-events: none;
+  position: absolute;
+  top: 40%;
+}
+.burger-menu::after {
+  display: inline-block;
+  content: "";
+  height: 2px;
+  width: 44px;
+  mix-blend-mode: difference;
+  background-color: white;
+  pointer-events: none;
+  position: absolute;
+  bottom: 40%;
+}
