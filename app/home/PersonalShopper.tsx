@@ -78,10 +78,12 @@ const PersonalShopper = (props: Props) => {
           che lo segua dal primo momento e che gli consigli attrezzature e
           abbigliamento più adatti alle sue richieste. Questo permette al
           personale di indirizzare la propria attenzione solo sul cliente che
-          desidera usufruire del servizio. <br />
+          desidera usufruire del servizio.
           <br />
-          Prenota la tua esperienza con i nostri esperti.La tua prossima
-          avventura ti attende!
+          <br />
+          Prenota la tua esperienza con i nostri esperti.
+          <br />
+          La tua prossima avventura ti attende!
           <br />
           <br />
           Per info e prenotazioni +02 8645 3034
