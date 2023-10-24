@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 
 type Props = { stickyElement?: React.MutableRefObject<null> };
 
-const Cursor = (props: Props) => {
+const Cursor = (props: Props, stickyElement?: HTMLDivElement) => {
   const [isHovered, setIsHovered] = useState(false);
   const cursorSize = window.innerWidth > 720 ? (isHovered ? 60 : 20) : 0;
   const mouse = {
@@ -17,10 +17,10 @@ const Cursor = (props: Props) => {
     y: useSpring(mouse.y, smoothOptions),
   };
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e;
-    const { left, top, width, height } = props.stickyElement?.current
-      ? props.stickyElement?.current?.getBoundingClientRect()
+    const { left, top, width, height } = stickyElement
+      ? stickyElement?.getBoundingClientRect()
       : { left: 0, top: 0, width: 0, height: 0 };
     const center = { x: left + width / 2, y: top + height / 2 };
     const distanceFrom = { x: clientX - center.x, y: clientY - center.y };
@@ -43,25 +43,13 @@ const Cursor = (props: Props) => {
 
   useEffect(() => {
     window.addEventListener("mousemove", manageMouseMove);
-    props.stickyElement?.current?.addEventListener(
-      "mouseover",
-      manageMouseOver
-    );
-    props.stickyElement?.current?.addEventListener(
-      "mouseleave",
-      manageMouseLeave
-    );
+    stickyElement?.addEventListener("mouseover", manageMouseOver);
+    stickyElement?.addEventListener("mouseleave", manageMouseLeave);
 
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
-      props.stickyElement?.current?.removeEventListener(
-        "mouseover",
-        manageMouseOver
-      );
-      props.stickyElement?.current?.removeEventListener(
-        "mouseleave",
-        manageMouseLeave
-      );
+      stickyElement?.removeEventListener("mouseover", manageMouseOver);
+      stickyElement?.removeEventListener("mouseleave", manageMouseLeave);
     };
   });
   return (
