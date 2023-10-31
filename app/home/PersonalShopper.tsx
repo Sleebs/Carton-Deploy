@@ -26,6 +26,9 @@ const PersonalShopper = (props: Props) => {
   const isInView = useInView(container);
   const presentation =
     " BUSSOLA. Il servizio mette a disposizione la competenza e la specializzazione del personale che, con attenzione, offre ai clienti un servizio personalizzato per soddisfare ogni loro esigenza. Una vera e propria guida che, passo dopo passo, ti accompagnerà nell’acquisto di attrezzatura e abbigliamento adatto alle richieste.";
+
+  const shortText =
+    " PERSONAL SHOPPER. Il servizio mette a disposizione la competenza e la specializzazione di una persona dedicata che, con attenzione e competenza, offre al cliente una vera e propria guida che lo accompagni   nell’acquisto di attrezzatura e abbigliamento adatti alle sue esigenze.";
   return (
     <section className='sm:h-screen w-full flex items-center justify-center pt-28 sm:pb-2'>
       <div className='w-full flex  flex-wrap sm:px-20' ref={container}>

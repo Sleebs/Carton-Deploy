@@ -53,6 +53,7 @@ const Hero = (props: Props) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
         className={`${bGrotesque.className} sm:text-9xl text-5xl font-medium flex flex-col items-center pointer-events-none relative top-1/2 -translate-y-1/2`}
+        style={{ textShadow: "-2px 2px 12px rgb(15, 18, 20, 0.82)" }}
       >
         Carton
       </motion.p>
