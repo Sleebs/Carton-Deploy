@@ -46,7 +46,7 @@ const Hero = (props: Props) => {
         alt=''
         // layout='fill'
         // objectFit='contain'
-        className=' absolute h-full  top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'
+        className=' absolute cursor-none h-full  top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'
       />
 
       <motion.p

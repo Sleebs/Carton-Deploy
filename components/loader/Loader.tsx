@@ -68,7 +68,7 @@ const Loader = (props: Props) => {
             alt=''
             // layout='fill'
             // objectFit='contain'
-            className=''
+            className='cursor-none'
           />
         </motion.div>
         <motion.section
