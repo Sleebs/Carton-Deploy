@@ -18,6 +18,10 @@ const Loader = (props: Props) => {
     },
   };
 
+  const imgStyle = {
+    "": "none",
+  };
+
   const item = {
     hidden: {
       opacity: 0,
@@ -42,7 +46,7 @@ const Loader = (props: Props) => {
         style={{ height: "96vh" }}
       >
         <motion.div
-          className='text-9xl'
+          className='text-9xl pointer-events-none'
           style={{ width: "1300px", height: "732px" }}
           initial={{ opacity: 0, y: 200, x: 0, scale: 1.1 }}
           animate={{
@@ -68,11 +72,11 @@ const Loader = (props: Props) => {
             alt=''
             // layout='fill'
             // objectFit='contain'
-            className='cursor-none'
+            className='pointer-events-none'
           />
         </motion.div>
         <motion.section
-          className='absolute  flex flex-wrap w-full sm:w-4/6 h-4/6 '
+          className='absolute  flex flex-wrap w-full sm:w-4/6 h-4/6 pointer-events-none'
           style={{}}
           variants={container}
           initial='hidden'
@@ -85,7 +89,7 @@ const Loader = (props: Props) => {
             </div>
           </motion.div>
           <motion.div
-            className='w-1/2 h-1/2 flex items-start justify-center'
+            className='w-1/2 h-1/2 flex items-start justify-center pointer-events-none'
             variants={item}
           >
             <div className='w-28 sm:w-auto'>
@@ -93,18 +97,18 @@ const Loader = (props: Props) => {
             </div>
           </motion.div>
           <motion.div
-            className='w-1/2 h-1/2 flex items-end justify-center'
+            className='w-1/2 h-1/2 flex items-end justify-center pointer-events-none'
             variants={item}
           >
-            <div className='w-28 sm:w-auto'>
+            <div className='w-28 sm:w-auto '>
               <Image src={herov2} alt='alt' width={200} height={400} />
             </div>
           </motion.div>
           <motion.div
-            className='w-1/2 h-1/2 flex items-end justify-end'
+            className='w-1/2 h-1/2 flex items-end justify-end pointer-events-none'
             variants={item}
           >
-            <div className='w-28 sm:w-auto'>
+            <div className='w-28 sm:w-auto '>
               <Image src={herov3} alt='alt' width={200} height={300} />
             </div>
           </motion.div>
